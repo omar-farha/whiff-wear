@@ -6,6 +6,7 @@ import Navigation from "@/components/navigation";
 import { supabase } from "@/lib/supabase";
 import type { Product, Category } from "@/types";
 import { hasSupabaseConfig } from "@/lib/supabase";
+export const dynamic = "force-dynamic";
 
 interface HeroSection {
   id: string;
