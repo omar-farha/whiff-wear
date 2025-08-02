@@ -41,7 +41,7 @@ async function getCategories(): Promise<Category[]> {
   const { data, error } = await supabase
     .from("categories")
     .select("*")
-    .limit(4);
+    .in("slug", ["sunglasses", "bags", "watches", "accessories"]);
 
   if (error) {
     console.error("Error fetching categories:", error);
